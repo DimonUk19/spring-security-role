@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма с именем и фамилией</title>
+</head>
+<body>
+<h1>Введите свое имя и фамилию</h1>
+
+<form th:action="@{/updateStudent/{id}(id=${student.id})}" th:object="${student}" method="post">
+    <label for="firstName">Имя:</label>
+    <input type="text" id="firstName" name="firstName" field="*{firstName}" />
+
+    <label for="lastName">Фамилия:</label>
+    <input type="text" id="lastName" name="lastName" field="*{lastName}" />
+
+    <button type="submit">Отправить</button>
+
+    <ul>
+        <li><a href = '/personalAccount'>Back</a></li>
+    </ul>
+</form>
+</body>
+</html>

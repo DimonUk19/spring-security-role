@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+</head>
+
+<body>
+<form action="/registration" method="post">
+  <div class="col-md-8 col-md-offset-2">
+    <h1>Login form</h1>
+  </div>
+  <div>
+    <label>Email:</label>
+    <input type="text" placeholder="email" name="email"
+           pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$" required title="Please enter correct Email"/>
+  </div>
+  <div>
+    <label>Firstname:</label>
+    <input type="text" placeholder="Username" name="username" required/>
+  </div>
+  <div>
+    <label>Password:</label>
+    <input type="text" placeholder="password" name="password" required/>
+  </div>
+  <input type="submit" value="Submit" />
+
+
+</form>
+<!--<div class="g-recaptcha" data-sitekey="6LeW7hQoAAAAAEDx0JyPkj0ZwlBYAr-RDOZYtzMl"></div>-->
+</form>
+</body>
+</html>

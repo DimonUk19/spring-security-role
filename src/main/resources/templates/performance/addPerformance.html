@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Student</title>
+</head>
+<body>
+<h2>Student: <td th:text="${student.firstName}"></td><td th:text="${student.lastName}"></td></h2>
+
+<form th:action="@{/addPerformance/{id}(id=${student.id})}" th:object="${performance}" method="post" onsubmit="addIdToAction()">
+
+  <label for="systemAnalysis">System Analysis:</label>
+  <input type="text" id="systemAnalysis" name="systemAnalysis" field="*{systemAnalysis}" />
+
+  <br/>
+
+  <label for="applicationProgramming">Application Programming:</label>
+  <input type="text" id="applicationProgramming" name="applicationProgramming" field="*{applicationProgramming}" />
+
+  <br/>
+
+  <label for="organisationDB">Organisation's Database:</label>
+  <input type="text" id="organisationDB" name="organisationDB" field="*{organisationDB}" />
+
+  <br/>
+
+  <button type="submit">Отправить</button>
+</form>
+
+</body>
+</html>

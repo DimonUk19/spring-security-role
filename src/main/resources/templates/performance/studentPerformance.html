@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Student Report</title>
+</head>
+<body>
+<h1>Student: <td th:text="${student.firstName}"></td> <td th:text="${student.lastName}"></td></h1>
+
+<table border="1">
+  <thead>
+  <tr>
+    <th>System analysis</th>
+    <th>Application programming</th>
+    <th>Organisation's database</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="perf : ${performance}">
+    <td th:text="${perf.systemAnalysis}"></td>
+    <td th:text="${perf.applicationProgramming}"></td>
+    <td th:text="${perf.organisationDB}"></td>
+  </tr>
+  </tbody>
+</table>
+
+<!--<table>
+  <tr>
+    <th>Student Name</th>
+    <td th:text="${student.name}"></td>
+  </tr>
+  <tr>
+    <th>System Analysis</th>
+    <td th:text="${student.systemAnalysis}"></td>
+  </tr>
+  <tr>
+    <th>Application Programming</th>
+    <td th:text="${student.applicationProgramming}"></td>
+  </tr>
+  <tr>
+    <th>Organisation DB</th>
+    <td th:text="${student.organisationDB}"></td>
+  </tr>
+</table>-->
+</body>
+</html>

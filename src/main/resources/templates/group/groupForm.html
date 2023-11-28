@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Форма для группы</title>
+</head>
+<body>
+<h1>Введите группу</h1>
+
+<form action="/addGroup" th:object="${group}" method="post">
+  <input type="text" id="nameOfGroup" name="nameOfGroup" field="*{nameOfGroup}" />
+
+  <button type="submit">Отправить</button>
+  <ul>
+    <li><a href = '/personalAccount'>Back</a></li>
+  </ul>
+</form>
+
+</body>
+</html>
